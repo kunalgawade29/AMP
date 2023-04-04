@@ -1,0 +1,29 @@
+print("AND operation")
+a=int(input("Enter integer :"))
+b=int(input("Enter Second integer:"))
+c=0
+c=a&b
+print("Line 1: a & B=",c)
+print("AND operation :",a,"&",b,"=",bin(c))
+d=bool(c)
+print(d)
+print("\nOR operation")
+z=a|b
+print("Line 2: a | B=",z)
+print("OR operation :",a,"|",b,"=",bin(z))
+print("\nXOR operation")
+s=a^b
+print("Line 3: a ^ B=",s)
+print("XOR operation :",a,"^",b,"=",bin(s))
+print("\nonce complement")
+s=~a
+print("Line 4: ~ a =",s)
+print("once complement operation :","~",a,"=",bin(s))
+print("\nLeft shift")
+s=a<<3
+print("Line 5: a << 3 =",s)
+print("Left Shift operation :",a,"<< 3","=",bin(s))
+print("\nRight shift")
+s=b>>2
+print("Line 6: b >> 2 =",s)
+print("Right Shift operation :",b,">> 2","=",bin(s))
