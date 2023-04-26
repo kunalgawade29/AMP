@@ -1,13 +1,18 @@
-package javaapplication4;
+package comparetestfile;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-public class JavaApplication4 {
-        private static boolean False;
-    public static void main(String[] args) throws FileNotFoundException,IOException  {
-                BufferedReader reader1=new BufferedReader(new FileReader("D:\\IR\\File1.txt"));
-        BufferedReader reader2=new BufferedReader(new FileReader("D:\\IR\\File2.txt"));
+
+
+
+public class CompareTestFile {
+    private static boolean False;
+
+    public static void main(String[] args)throws FileNotFoundException,IOException {
+        BufferedReader reader1=new BufferedReader(new FileReader("E:\\sem_6\\Information_Retrieval\\text1.txt"));
+        BufferedReader reader2=new BufferedReader(new FileReader("E:\\sem_6\\Information_Retrieval\\text2.txt"));
         String line1=reader1.readLine();
         String line2=reader1.readLine();
         boolean areEqual=true;
@@ -22,6 +27,7 @@ public class JavaApplication4 {
             line1=reader1.readLine();
             line2=reader2.readLine();
             lineNum++;
+            
         }
         if(areEqual)
         {
@@ -35,5 +41,3 @@ public class JavaApplication4 {
         reader1.close();
         reader2.close();
     }
-    
-}
