@@ -1,0 +1,49 @@
+employee.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<employee>
+<fname>vishnu</fname>
+<lname>gawas</lname>
+<home>Sawantwadi</home>
+<Expertise name="SQL"/>
+<Expertise name="Paytm"/>
+<Expertise name="Testing"/>
+<Expertise name="Business"/>
+</employee>
+
+
+P71.PY
+import xml.dom.minidom
+def main():
+    doc=xml.dom.minidom.parse("employee.xml")
+    print(doc.nodeName)
+    print(doc.firstChild.tagName)
+
+        
+if __name__=="__main__":
+    main()
+
+
+P72.PY
+import xml.dom.minidom
+def main():
+    doc=xml.dom.minidom.parse("employee.xml")
+    print(doc.nodeName)
+    print(doc.firstChild.tagName)
+
+    expertise=doc.getElementsByTagName("Expertise")
+    print("%d expertise:"%expertise.length)
+    for skills in expertise:
+        print(skills.getAttribute("name"))
+        newExpertise=doc.createElement("Expertise")
+        newExpertise.setAttribute("name","BigData")
+        doc.firstChild.appendChild(newExpertise)
+        print(" ")
+        expertise=doc.getElementsByTagName("Expertise")
+        print("%d expertise:"%expertise.length)
+    for skills in expertise:
+        print(skills.getAttribute("name"))
+
+
+        
+if __name__=="__main__":
+    main();
